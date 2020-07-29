@@ -1,4 +1,4 @@
-runtime: shell
+runtime: custom
 env: flex
  
 handlers:
