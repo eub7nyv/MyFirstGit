@@ -17,3 +17,8 @@ steps:
   args: [ 'build', '-t', 'gcr.io/my-project-newcicd/helloworld-image', '.' ]
 images:
 - 'gcr.io/my-project-newcicd/helloworld-image'
+
+steps:
+- name: 'gcr.io/cloud-builders/gcloud'
+  args: ['app', 'deploy']
+  timeout: '1600s'
