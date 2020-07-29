@@ -3,14 +3,6 @@ steps:
 # to run a shell script; and
 # set env variables for its execution
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['bash', './helloword.sh']
-  env:
-  - 'BUILD=$BUILD_ID'
-  - 'PROJECT=$PROJECT_ID'
-  - 'REV=$REVISION_ID'
-
-# Uses the docker build step to build an image called my-image
-- name: 'gcr.io/cloud-builders/docker'
   args: ['build', '-t', 'gcr.io/my-project-newcicd/helloworld-image', '.']
   
 - name: 'gcr.io/cloud-builders/gcloud'
